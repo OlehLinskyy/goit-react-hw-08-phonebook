@@ -20,18 +20,18 @@ export const App = () => {
   const { isLoggedIn, isRefreshing } = useAuth();
 
   const dispatch = useDispatch();
-  const callOnceDispatch = useRef(true)
+  //const callOnceDispatch = useRef(true)
 
   useEffect(() => {
-    if (callOnceDispatch.current) {
-      callOnceDispatch.current = false
+    //if (callOnceDispatch.current) {
+    //  callOnceDispatch.current = false
     dispatch(refreshUser());
-    }
+    //}
   }, [dispatch]);
 
   const navigate = useNavigate();
   useEffect(() => {
-    if (isLoggedIn) {
+    if (isLoggedIn && (window.location.href.includes('login') || window.location.href.includes('register'))) {
       navigate('/contacts');
     } 
   }, [isLoggedIn, navigate]);

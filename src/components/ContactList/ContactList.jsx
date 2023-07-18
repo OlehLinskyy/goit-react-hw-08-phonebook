@@ -11,12 +11,12 @@ function ContactList() {
   const { items, isLoading, error } = useSelector(getContact);
 
   const dispatch = useDispatch();
-  const callOnceDispatch = useRef(true);
+  //const callOnceDispatch = useRef(true);
   useEffect(() => {
-    if (callOnceDispatch.current) {
-      callOnceDispatch.current = false;
+    //if (callOnceDispatch.current) {
+    //  callOnceDispatch.current = false;
       dispatch(fetchContacts());
-    }
+    //}
   }, [dispatch]);
 
   const filters = useSelector(getFilter);
