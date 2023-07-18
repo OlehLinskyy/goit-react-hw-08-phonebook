@@ -20,13 +20,8 @@ export const App = () => {
   const { isLoggedIn, isRefreshing } = useAuth();
 
   const dispatch = useDispatch();
-  //const callOnceDispatch = useRef(true)
-
   useEffect(() => {
-    //if (callOnceDispatch.current) {
-    //  callOnceDispatch.current = false
     dispatch(refreshUser());
-    //}
   }, [dispatch]);
 
   const navigate = useNavigate();
