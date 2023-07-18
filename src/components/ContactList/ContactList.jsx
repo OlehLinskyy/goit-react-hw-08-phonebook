@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { useEffect, useRef } from 'react';
+import { useEffect} from 'react';
 import { getFilter } from 'redux/contacts/selectors';
 import { getContact } from 'redux/contacts/selectors';
 import { fetchContacts } from 'redux/contacts/operations';
