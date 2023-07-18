@@ -31,11 +31,10 @@ export const App = () => {
 
   const navigate = useNavigate();
   useEffect(() => {
-    if (isLoggedIn && (window.location.href.includes('login') || window.location.href.includes('register'))) {
+    if (isLoggedIn) {
       navigate('/contacts');
     } 
   }, [isLoggedIn, navigate]);
-
 
   return (
     <>
