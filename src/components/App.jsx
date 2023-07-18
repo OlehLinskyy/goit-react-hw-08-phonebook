@@ -31,24 +31,28 @@ export const App = () => {
 
   const navigate = useNavigate();
   useEffect(() => {
-    if (isLoggedIn && (window.location.href.includes('login') || window.location.href.includes('register'))) {
+    if (
+      isLoggedIn &&
+      (window.location.href.includes('login') ||
+        window.location.href.includes('register'))
+    ) {
       navigate('/contacts');
-    } 
+    }
   }, [isLoggedIn, navigate]);
 
   return (
     <>
-      {!isRefreshing  && (
-        <Routes>
-          <Route path="/" element={<SharedLayout />}>
-            <Route index element={<Home />}></Route>
-            <Route path="/login" element={<LoginPage />} />
-            <Route path="/register" element={<RegisterPage />} />
-            <Route path="*" element={<NotFound />} />
-            <Route
-              path="/contacts"
-              element={
-                <ProtectedRoute isLoggedIn={isLoggedIn}>
+      {!isRefreshing && (
+          <Routes>
+            <Route path="/" element={<SharedLayout />}>
+              <Route index element={<Home />}></Route>
+              <Route path="/login" element={<LoginPage />} />
+              <Route path="/register" element={<RegisterPage />} />
+              <Route path="*" element={<NotFound />} />
+              <Route
+                path="/contacts"
+                element={
+                  <ProtectedRoute isLoggedIn={isLoggedIn}>
                     <div className={css.section}>
                       <div className={css.form}>
                         <h1 className={css.title}>Phonebook</h1>
@@ -60,11 +64,11 @@ export const App = () => {
                         <ContactList />
                       </div>
                     </div>
-                </ProtectedRoute>
-              }
-            />
-          </Route>
-        </Routes>
+                  </ProtectedRoute>
+                }
+              />
+            </Route>
+          </Routes>
       )}
     </>
   );
