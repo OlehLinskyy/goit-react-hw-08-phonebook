@@ -1,0 +1,22 @@
+.list {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  color: #769656;
+}
+.contact_value {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  color: #769656;
+}
+.contact_value p {
+  width: 90px;
+}
+.button {
+  height: 20px;
+  margin: auto 0;
+  background-color: #769656;
+  border: 1px solid white;
+  border-radius: 5px;
+  color: #312e2b;
+}

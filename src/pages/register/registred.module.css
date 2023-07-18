@@ -1,0 +1,35 @@
+.register_page {
+  margin: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.register {
+  color: #769656;
+  font-size: 25px;
+}
+.input {
+  width: 165px;
+  background-color: #312e2b;
+  border: 1px solid #769656;
+  border-radius: 5px;
+  color: #769656;
+}
+.input:-webkit-autofill {
+  -webkit-text-fill-color: #769656;
+  -webkit-box-shadow: #769656;
+  caret-color: #769656;
+  transition: background-color 5000s ease-in-out 0s;
+}
+.button {
+  height: 20px;
+  border: 1px solid white;
+  border-radius: 5px;
+  background-color: #769656;
+  color: #312e2b;
+  display: block;
+  width: 100px;
+}
+.error {
+  color: rgb(219, 67, 67);
+}
